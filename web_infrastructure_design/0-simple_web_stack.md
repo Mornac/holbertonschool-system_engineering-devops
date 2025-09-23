@@ -10,7 +10,7 @@ A user wants to access the website www.foobar.com from the web browser :
     - 1 application files (code base)
     - 1 database (MySQL)
 
-![New Design of the Web server Infrastructure](https://raw.githubusercontent.com/Mornac/holbertonschool-system_engineering-devops/main/web_infrastructure_design/images/Web%20server%20infrastructure.jpg)
+![Design of the Web server Infrastructure](https://raw.githubusercontent.com/Mornac/holbertonschool-system_engineering-devops/main/web_infrastructure_design/images/Web%20server%20infrastructure.jpg)
 
 ## 2. Specifics about the infrastructure  
 ### What is a Server?  
