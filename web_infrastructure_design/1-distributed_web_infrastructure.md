@@ -15,7 +15,7 @@ A user wants to access the website www.foobar.com from the web browser :
 
 ![Design of the three server web Infrastructure](https://raw.githubusercontent.com/Mornac/holbertonschool-system_engineering-devops/main/web_infrastructure_design/images/Task1.jpg)
 
-## 2. Specifics about the infrastruture
+## 2. Specifics about the infrastructure
 ### For every additional element, why added it?  
 - Load Balancer (HAproxy):
     - Eliminates single point of failure for web servers  
