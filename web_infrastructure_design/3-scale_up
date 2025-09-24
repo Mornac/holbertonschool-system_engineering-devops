@@ -1,0 +1,57 @@
+# Advanced Web infrastructure
+## 1. Advanced Web infrastructure with component separation
+A user wants to access the website www.foobar.com from the web browser :
+- Use a domain name : foobar.com
+- Configure with : www
+- Server IP: 8.8.8.8
+- 1 load-balancer (HAproxy)
+- 3 web servers containing: 
+    - 1 web server (Nginx)
+    - 1 application server
+    - 1 set of application files (code base)
+- Separate database cluster:
+    - 1 MySQL Primary database
+    - 1 MySQL Replica database
+- 3 firewalls
+-1 SSL certificate to serve www.foobar.com over HTTPS
+-3 monitoring clients: 
+    - 1 Monitoring client installed on Server1
+    - 1 Monitoring client installed on Server2
+    - 1 Monitoring client installed on Server3
+- 1 additional Server
+- 1 additional Load Balancer with a Cluster configuration
+- Component separation across dedicated servers
+
+
+![Design of the Advanced Web infrastructure]()
+
+## 2. Specifics about the infrastruture
+### For every additional element, why added it?  
+- Additional Server:
+    - Better resource utilization: each server optimized for its specific component
+    - Independent scaling: can add more web servers without adding app servers
+    - Specialized hardware: web servers can have fast network cards, app servers more CPU/RAM
+    - Maintenance flexibility: update one component type without affecting others
+- Additional Load Balancer with a Cluster configuration:
+    - 99.99% uptime: no single point of failure at the load balancer level
+    - Seamless failover: users don't notice when primary Load Balancer fails
+    - Load distribution: can share load between both load balancers
+    - Maintenance capability: can update one Load Balancer while other handles traffic
+- Component separation across dedicated servers:
+
+|Component separation|Reasons|Explanation|
+|--------------------|-------|-----------|
+|Web Server separation|Performance optimization|Servers tuned for HTTP handling and static content serving|
+||Resource focus|CPU and network optimized for web serving|
+||Independent scaling|Add web capacity without adding app capacity|
+||Security isolation|Web tier exposed to internet, other tiers protected|
+||Technology flexibility|Can easily switch web server technology (Apache, Nginx, etc.)|
+|Application Server separation|Computing power focus|Servers with high CPU and memory for business logic|
+||Independent scaling|Scale app servers based on processing needs|
+||Code deployment|Easier to deploy application updates to dedicated servers|
+||Resource allocation|More memory and CPU available for application processing|
+||Technology stack flexibility|Can use different app server technologies|
+|Database separation|Storage optimization|Servers with fast SSDs and high I/O capacity|
+||Memory allocation|large amounts of RAM for database caching|
+||Security isolation|Database not directly accessible from web tier|
+||Backup and recovery|Specialized database backup procedures|
