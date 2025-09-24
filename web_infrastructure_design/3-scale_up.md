@@ -25,7 +25,7 @@ A user wants to access the website www.foobar.com from the web browser :
 
 ![Design of the Advanced Web infrastructure](https://raw.githubusercontent.com/Mornac/holbertonschool-system_engineering-devops/main/web_infrastructure_design/images/Task3.jpg)
 
-## 2. Specifics about the infrastruture
+## 2. Specifics about the infrastructure
 ### For every additional element, why added it?  
 - Additional Server:
     - Better resource utilization: each server optimized for its specific component
