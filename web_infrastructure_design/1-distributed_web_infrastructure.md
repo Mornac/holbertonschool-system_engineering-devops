@@ -13,7 +13,7 @@ A user wants to access the website www.foobar.com from the web browser :
     - 1 MySQL Primary database
     - 1 MySQL Replica database
 
-![Design of the three server web Infrastructure]()
+![Design of the three server web Infrastructure](https://raw.githubusercontent.com/Mornac/holbertonschool-system_engineering-devops/main/web_infrastructure_design/images/Task1.jpg)
 
 ## 2. Specifics about the infrastruture
 ### For every additional element, why added it?  
