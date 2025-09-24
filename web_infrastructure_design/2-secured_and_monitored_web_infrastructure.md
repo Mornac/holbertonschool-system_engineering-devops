@@ -20,7 +20,7 @@ A user wants to access the website www.foobar.com from the web browser :
     - 1 Monitoring client installed on Server3
 
 
-![Design of the Secured and monitored web infrastructure]()
+![Design of the Secured and monitored web infrastructure](https://raw.githubusercontent.com/Mornac/holbertonschool-system_engineering-devops/main/web_infrastructure_design/images/Task2.jpg)
 
 ## 2. Specifics about the infrastruture
 ### For every additional element, why added it?  
